@@ -1,3 +1,4 @@
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +14,49 @@ body {
     height: 100vh;
 }
 
+/* Landing Page Styles */
+.landing-container {
+    background: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.welcome-message h1 {
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.welcome-message p {
+    color: #666;
+    margin-bottom: 1.5em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.button {
+    background: #4CAF50;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #45a049;
+}
+
+/* Form Page Styles */
 .container {
     background: #fff;
     padding: 2em;
@@ -72,4 +116,16 @@ button:hover {
 #error-message {
     color: red;
     margin-top: 1em;
+}
+
+.back-button {
+    display: block;
+    margin-top: 1em;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.back-button:hover {
+    text-decoration: underline;
 }
