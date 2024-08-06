@@ -3,29 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elan Garden - Home</title>
-    <link rel="stylesheet" href="Styles.css">
+    <title>Elan Garden</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-left">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-            <a href="index.html">Elan Garden</a>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Elan Garden Logo">
+                <span>Elan Garden</span>
+            </div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="cards" id="services">
+        <div class="card">
+            <img src="images/resinart.jpg" alt="Resin Art">
+            <h3>Resin Art</h3>
+            <p>Preserve your precious things through Resin art</p>
+            <button onclick="openModal()">Book Now</button>
         </div>
-        <div class="nav-right">
-            <a href="login.html" class="nav-button">Login</a>
-            <a href="register.html" class="nav-button">Register</a>
+        <div class="card">
+            <img src="images/sticker.jpeg" alt="Elan Sticker">
+            <h3>Elan Sticker</h3>
+            <p>One stop solution for Resin Art Customized Sticker</p>
+            <button onclick="openModal()">Book Now</button>
         </div>
-    </nav>
+        <div class="card">
+            <img src="images/resinstore.jpg" alt="Resin Store">
+            <h3>Resin Store</h3>
+            <p>Epoxy Resin for Resin art</p>
+            <button onclick="openModal()">Book Now</button>
+        </div>
+        <div class="card">
+            <img src="images/polaroids.jpg" alt="Polaroids Photos">
+            <h3>Polaroids Photos</h3>
+            <p>Print your Memories with Rs.5 per Photo (Min 40 pics)</p>
+            <button onclick="openModal()">Book Now</button>
+        </div>
+    </section>
 
-    <!-- Landing Page Content -->
-    <div class="landing-container">
-        <h1>Welcome to Elan Garden</h1>
-        <div class="button-container">
-            <a href="login.html" class="modern-button">Login</a>
-            <a href="register.html" class="modern-button">Register</a>
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Booking Form</h2>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Mobile No:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                
+                <label>Product:</label>
+                <label><input type="checkbox" name="product" value="resinArt"> Resin Art</label>
+                <label><input type="checkbox" name="product" value="elanSticker"> Elan Sticker</label>
+                <label><input type="checkbox" name="product" value="resinStore"> Resin Store</label>
+                <label><input type="checkbox" name="product" value="polaroids"> Polaroids Photos</label>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                
+                <label for="deliveryDate">Delivery Date:</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+                
+                <label><input type="checkbox" name="confirmOrder" required> Confirm this order</label>
+                
+                <button type="submit">Place Order</button>
+            </form>
         </div>
     </div>
+
+    <footer id="contact">
+        <div class="bg-image"></div>
+        <form id="contactForm">
+            <div class="head">
+                <h1>Contact Form</h1>
+                <p>Please fill all the texts in the fields</p>
+            </div>
+            
+            <label for="fullName">Your Name:</label>
+            <input type="text" placeholder="Full Name" name="fullName" id="fullName" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" placeholder="abcd@xyz.com" name="email" id="email" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" placeholder="Job Enquiry" name="subject" id="subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea placeholder="Your Message Here" name="message" id="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
