@@ -1,131 +1,81 @@
-/* Reset and Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+/* Existing Styles */
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 2em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.brand {
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Update for body to accommodate fixed navbar */
 body {
     background: #f7f7f7;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 60px); /* Adjust height for fixed navbar */
+    margin-top: 60px; /* Space for the fixed navbar */
 }
 
-/* Landing Page Styles */
+/* Update for landing container */
 .landing-container {
-    background: #fff;
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
     text-align: center;
 }
 
-.welcome-message h1 {
-    color: #333;
-    margin-bottom: 0.5em;
-}
-
-.welcome-message p {
-    color: #666;
-    margin-bottom: 1.5em;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
+.buttons {
+    margin-top: 2em;
 }
 
 .button {
-    background: #4CAF50;
-    color: #fff;
+    display: inline-block;
     padding: 0.75em 1.5em;
-    border: none;
+    margin: 0.5em;
+    color: #fff;
+    background-color: #4CAF50;
     border-radius: 5px;
     text-decoration: none;
     font-size: 1em;
-    transition: background 0.3s ease;
 }
 
 .button:hover {
-    background: #45a049;
-}
-
-/* Form Page Styles */
-.container {
-    background: #fff;
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-}
-
-.form-container {
-    text-align: center;
-}
-
-h1 {
-    color: #333;
-    margin-bottom: 0.5em;
-}
-
-h2 {
-    color: #666;
-    margin-bottom: 1em;
-}
-
-.form-group {
-    margin-bottom: 1.5em;
-    text-align: left;
-}
-
-label {
-    display: block;
-    color: #333;
-    margin-bottom: 0.5em;
-}
-
-input {
-    width: 100%;
-    padding: 0.75em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-button {
-    background: #4CAF50;
-    color: #fff;
-    padding: 0.75em 1.5em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-button:hover {
-    background: #45a049;
-}
-
-#error-message {
-    color: red;
-    margin-top: 1em;
-}
-
-.back-button {
-    display: block;
-    margin-top: 1em;
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-.back-button:hover {
-    text-decoration: underline;
+    background-color: #45a049;
 }

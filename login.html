@@ -7,14 +7,27 @@
     <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="profile.jpg" alt="Profile" class="profile-pic">
+            <a href="#" class="brand">Elan Garden</a>
+            <div class="nav-links">
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Page Content -->
     <div class="container">
         <div class="form-container">
             <h1>Elan Garden</h1>
             <h2>Login</h2>
             <form id="loginForm">
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
@@ -22,8 +35,7 @@
                 </div>
                 <button type="submit">Login</button>
             </form>
-            <p id="login-error-message"></p>
-            <a href="index.html" class="back-button">Back to Home</a>
+            <p id="error-message"></p>
         </div>
     </div>
     <script src="script.js"></script>
