@@ -1,12 +1,27 @@
-// Register Page Validation
-document.getElementById('registerForm')?.addEventListener('submit', function(event) {
+document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const username = document.getElementById('username')?.value;
-    const email = document.getElementById('email')?.value;
-    const password = document.getElementById('password')?.value;
-    const confirmPassword = document.getElementById('confirmPassword')?.value;
-    const errorMessage = document.getElementById('register-error-message');
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
+
+    // Here you can add login logic, e.g., send data to a server
+    console.log({
+        email: email,
+        password: password
+    });
+
+    alert('Login successful!');
+});
+
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const errorMessage = document.getElementById('error-message');
 
     if (password !== confirmPassword) {
         errorMessage.textContent = 'Passwords do not match';
@@ -14,24 +29,13 @@ document.getElementById('registerForm')?.addEventListener('submit', function(eve
     }
 
     errorMessage.textContent = '';
-    console.log({ username, email, password });
+
+    // Here you can add registration logic, e.g., send data to a server
+    console.log({
+        username: username,
+        email: email,
+        password: password
+    });
+
     alert('Registration successful!');
-});
-
-// Login Page Validation
-document.getElementById('loginForm')?.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const email = document.getElementById('email')?.value;
-    const password = document.getElementById('password')?.value;
-    const errorMessage = document.getElementById('login-error-message');
-
-    if (!email || !password) {
-        errorMessage.textContent = 'Please fill in all fields';
-        return;
-    }
-
-    errorMessage.textContent = '';
-    console.log({ email, password });
-    alert('Login successful!');
 });
